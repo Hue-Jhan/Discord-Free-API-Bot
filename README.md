@@ -10,15 +10,15 @@ The API functions i added are quite simple, i wanted to add some image altering 
 
 Here are the functions i added:
 
-- **!dog**: Gives u a random dog image    <!-- <img align="center" src="https://github.com/Hue-Jhan/Discord-Free-API-Bot/blob/main/media/apibot%20dog.png" width="100" style="float: left;" /> --> 
-- **!achiev (string)**: Type something and it gives u a minecraft achievemnt image of that
-- **!drake (string) (string)**: Type something and it gives u a drake meme image of that
-- **!supreme (string)**: Type something and it gives u a supreme image of that
-- **!ph (string) (string)**: Type something and it gives u a pronhub image of that
-- **!meme (memename) (string) (string)**: Choose the meme, what to type and it will give u the pic
-- **!joke**: Gives u a random unfunny joke
-- **!urban (string) (number)**: Type something and it gives u the first 3 urban definitions of that, you can specify with (number) the exact result you want
-- **!insult (string)**: Gives u a random insult
+- **!dog**: Gives u a random dog image [API](https://dog.ceo/api/breeds/image/random)   <!-- <img align="center" src="https://github.com/Hue-Jhan/Discord-Free-API-Bot/blob/main/media/apibot%20dog.png" width="100" style="float: left;" /> --> 
+- **!achiev (string)**: Type something and it gives u a minecraft achievemnt image of that, [API](https://api.alexflipnote.dev/achievement?text=xd)
+- **!drake (string) (string)**: Type something and it gives u a drake meme image of that, [API](https://frenchnoodles.xyz/api/endpoints/drake/?text1=bals&text2=balz)
+- **!supreme (string)**: Type something and it gives u a supreme image of that, [API](https://api.alexflipnote.dev/supreme?text=sium)
+- **!ph (string) (string)**: Type something and it gives u a pronhub image of that, [API](https://api.alexflipnote.dev/pornhub?text=xd&text2=lel)
+- **!meme (memename) (string) (string)**: Choose the meme, what to type and it will give u the pic, [API](https://api.memegen.link/images/)
+- **!joke**: Gives u a random unfunny joke, [API](https://official-joke-api.appspot.com/jokes/random)
+- **!urban (string) (number)**: Type something and it gives u the first 3 urban definitions of that, you can specify with (number) the exact result you want, [API](https://api.urbandictionary.com/v0/define?term=kek)
+- **!insult (string)**: Gives u a random insult, [API](https://evilinsult.com/generate_insult.php?lang=en&type=json)
 
 You can find examples of this commmands being executed in `media` folder, here are some examples:
 
