@@ -2,7 +2,7 @@ from typing import Final
 import os, json, requests, discord, urllib.parse
 from dotenv import load_dotenv
 from discord import Intents, Client, Message
-from responsesapi import get_response
+from responses import get_response
 from discord.ext import tasks, commands
 from io import BytesIO
 from PIL import Image
@@ -18,14 +18,6 @@ intents: Intents = discord.Intents.all()
 intents.message_content = True  # NOQA
 intents.members = True  # ignore if it gives u warnings
 client = commands.Bot(command_prefix="!", intents=intents)
-
-
-class SupportServerView(discord.ui.View):
-    def __init__(self):
-        super().__init__()
-        self.add_item(discord.ui.Button(label='Dashboard', url='https://api.jeyy.xyz/'))
-        self.add_item(discord.ui.Button(label='Gallery', url='https://jeyy.xyz/gallery'))
-        self.add_item(discord.ui.Button(label='Support Server', url='https://discord.gg/uwKsfMzGJA'))
 
 
 # startup
