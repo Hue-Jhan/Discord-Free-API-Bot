@@ -29,6 +29,8 @@ You can find examples of this commmands being executed in `media` folder, here a
 <img align="left" src="https://github.com/Hue-Jhan/Discord-Free-API-Bot/blob/main/media/apibot%20urban.png" width="100" />
 <img align="left" src="https://github.com/Hue-Jhan/Discord-Free-API-Bot/blob/main/media/apibot%20dog.png" width="100" />
 
+---
+<p>   </p>
 <p>   </p>
 <p>   </p>
 
