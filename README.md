@@ -43,7 +43,7 @@ You can find examples of this commmands being executed in `media` folder, here a
 
 # Other Functions 🔧
 
-- The bot possesses triggers you can customize in the `"responses.py"` folder (WARNING NSFW CONTENT).
+- The bot possesses triggers you can customize in the `responses.py` folder (WARNING NSFW CONTENT).
 You can customize the bot command to receive personal messages instead of receiving the answer in the channel where you asked it.
 The triggers include a rolling dice function and a random age function
 
