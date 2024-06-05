@@ -39,7 +39,7 @@ async def h(ctx):
     em.add_field(name='!meme (memename) (string) (string)', value='Choose the meme, what to type and it will give u the pic', inline=False)
     em.add_field(name='!joke', value='Gives u a random unfunny joke', inline=False)
     em.add_field(name='!urban (string) (number)', value='Type something and it gives u the first 3 urban definitions of that, you can specify with (number) the exact result you want', inline=False)
-    em.add_field(name='!insult (string)', value='Gives u a random insult', inline=False)
+    em.add_field(name='!insult', value='Gives u a random insult', inline=False)
     await ctx.send(embed=em)
 
 
