@@ -13,7 +13,7 @@ Here are the functions i added:
 - **!h**: Lists all the commands, do not confuse it with !help;
 - **!dog**: Gives u a random dog image, [API](https://dog.ceo/api/breeds/image/random)  <!-- <img align="center" src="https://github.com/Hue-Jhan/Discord-Free-API-Bot/blob/main/media/apibot%20dog.png" width="100" /> --> 
 - **!achiev (string)**: Type something and it gives u a minecraft achievemnt image of that, [API](https://api.alexflipnote.dev/achievement?text=xd).
-- **!drake (string) (string)**: Type something and it gives u a drake meme image of that, [API](https://frenchnoodles.xyz/api/endpoints/drake/?text1=bals&text2=balz)
+- **!drake (string) (string)**: Type something and it gives u a drake meme image of that, [API](https://frenchnoodles.xyz/api/endpoints/drake/?text1=bals&text2=balz).
 - **!supreme (string)**: Type something and it gives u a supreme image of that, [API](https://api.alexflipnote.dev/supreme?text=sium)
 - **!ph (string) (string)**: Type something and it gives u a pronhub image of that, [API](https://api.alexflipnote.dev/pornhub?text=xd&text2=lel)
 - **!meme (memename) (string) (string)**: Choose the meme, what to type and it will give u the pic, [API](https://api.memegen.link/images/)
