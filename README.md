@@ -3,7 +3,7 @@ Discord Bot with free simple api functions, with built in responses, help comman
 
 HOW TO USE: Simply create a discord bot, upload this codes to your PyCharm specified folder. You will need to make an .env file and specify your bot AuthToken by typing DISCORD_TOKEN=xxxxxxxxxxxxxxxxxxxx
 
-# API FUNCTIONS 💻
+# 💻 API FUNCTIONS
 <img align="right" src="https://github.com/Hue-Jhan/Discord-Free-API-Bot/blob/main/media/apibot%20h.png" width="350" />
 
 The API functions i added are quite simple, i wanted to add some image altering ones but every api uses different kind of classes n stuff so i got bored, also theres `Jayx` and `NotSoBot` for advanced image altering.
@@ -41,7 +41,7 @@ You can find examples of this commmands being executed in `media` folder, here a
 <p>   </p>
 <p>   </p>
 
-# Other Functions 🔧
+# 🔧 Other Functions
 
 - The bot possesses triggers you can customize in the `responses.py` folder (WARNING NSFW CONTENT).
 You can customize the bot command to receive personal messages instead of receiving the answer in the channel where you asked it.
