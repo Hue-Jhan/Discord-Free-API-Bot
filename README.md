@@ -1,16 +1,17 @@
 # Discord-Free-API-Bot
-Discord Bot with free simple api functions, with built in responses, help command, triggers and more. Made in python.
+Discord Bot with free simple api and AI functions, with built in responses, help command, triggers and more. Made in python.
 
 HOW TO USE: Simply create a discord bot, upload this codes to your PyCharm specified folder. You will need to make an .env file and specify your bot AuthToken by typing DISCORD_TOKEN=xxxxxxxxxxxxxxxxxxxx
 
 # 💻 API FUNCTIONS
 <img align="right" src="https://github.com/Hue-Jhan/Discord-Free-API-Bot/blob/main/media/apibot%20h.png" width="350" />
 
-The API functions i added are quite simple, i wanted to add some image altering ones but every api uses different kind of classes n stuff so i got bored, also theres `Jayx` and `NotSoBot` for advanced image altering.
+The API functions i added are quite simple, i wanted to add some image altering ones but every api uses different kind of classes n stuff so i got bored, also theres `Jayx` and `NotSoBot` for advanced image altering. I added a prodia api command that uses the prodia stable diffusion model, allowing you to generate images based on a given prompt. 
 
 Here are the functions i added:
 
 - **!h**: Lists all the commands, do not confuse it with !help;
+- **!ai3 (string)**: Generates an image based on your prompt (Prodia ai api); 
 - **!dog**: Gives u a random dog image, [API](https://dog.ceo/api/breeds/image/random)  <!-- <img align="center" src="https://github.com/Hue-Jhan/Discord-Free-API-Bot/blob/main/media/apibot%20dog.png" width="100" /> --> 
 - **!achiev (string)**: Type something and it gives u a minecraft achievemnt image of that, [API](https://api.alexflipnote.dev/achievement?text=xd).
 - **!drake (string) (string)**: Type something and it gives u a drake meme image of that, [API](https://frenchnoodles.xyz/api/endpoints/drake/?text1=bals&text2=balz).
