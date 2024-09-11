@@ -4,9 +4,11 @@ from dotenv import load_dotenv
 from discord import Intents, Client, Message
 from responses import get_response
 from discord.ext import tasks, commands
+from prodiapy import Prodia
 from io import BytesIO
 from PIL import Image
 import random
+import asyncio
 import aiohttp
 import time
 
@@ -18,6 +20,7 @@ intents: Intents = discord.Intents.all()
 intents.message_content = True  # NOQA
 intents.members = True  # ignore if it gives u warnings
 client = commands.Bot(command_prefix="!", intents=intents)
+url_prodia = "https://api.prodia.com/v1/sd/generate"
 
 
 # startup
@@ -40,6 +43,7 @@ async def h(ctx):
     em.add_field(name='!joke', value='Gives u a random unfunny joke', inline=False)
     em.add_field(name='!urban (string) (number)', value='Type something and it gives u the first 3 urban definitions of that, you can specify with (number) the exact result you want', inline=False)
     em.add_field(name='!insult', value='Gives u a random insult', inline=False)
+    em.add_field(name='!ai', value='Type something and its gonna generate an image of that', inline=False)
     await ctx.send(embed=em)
 
 
@@ -214,6 +218,80 @@ async def urban(ctx, *, input: str, MaxDef: int = 3):
             await ctx.send(f"No definitions found for {input}")
     except Exception as e:
         await ctx.send(f"An error occurred: {e}")
+
+
+@client.command()
+async def ai(ctx, *, prompt):
+    try:
+        url_prodia_generate = "https://api.prodia.com/v1/sd/generate"
+        payload = {
+            "model": "v1-5-pruned-emaonly.safetensors [d7049739]",
+            "prompt": prompt,
+            "negative_prompt": "badly drawn",
+            "steps": 20,
+            "cfg_scale": 7,
+            "seed": -1,
+            "upscale": False,
+            "sampler": "DPM++ 2M Karras",
+            "width": 512,
+            "height": 512
+        }
+        headers = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "X-Prodia-Key": "XXXXXXXXXXXXXXXXXXXXXXXXX"
+        }
+
+        async with aiohttp.ClientSession() as session:
+            async with session.post(url_prodia_generate, json=payload, headers=headers) as response:
+                if response.status != 200:
+                    await ctx.send(f"Error: Received status code {response.status}")
+                    return
+
+                response_data = await response.json()
+                job_id = response_data.get("job")
+                if not job_id:
+                    await ctx.send("Failed to start job.")
+                    return
+
+                await ctx.send(f"Job queued, pls wait...")
+                
+                await poll_job_status(ctx, job_id)
+
+    except Exception as e:
+        await ctx.send(f"An error occurred: {e}")
+
+async def poll_job_status(ctx, job_id):
+        url_prodia_status = f"https://api.prodia.com/v1/job/{job_id}"
+        headers = {
+            "accept": "application/json",
+            "X-Prodia-Key": "XXXXXXXXXXXXXXXXXXXXXXXXX7"
+        }
+
+        while True:
+            await asyncio.sleep(1)
+
+            async with aiohttp.ClientSession() as session:
+                async with session.get(url_prodia_status, headers=headers) as response:
+                    if response.status != 200:
+                        await ctx.send(f"Error: Received status code {response.status}")
+                        return
+
+                    status_data = await response.json()
+                    status = status_data.get("status")
+                    if status == "succeeded":
+                        image_url = status_data.get("imageUrl")
+                        if image_url:
+                            await send_image(ctx, image_url)
+                            break
+                    elif status == "failed":
+                        await ctx.send("Job failed.")
+                        break
+
+async def send_image(ctx, image_url):
+        embed = discord.Embed(title="Generated Image")
+        embed.set_image(url=image_url)
+        await ctx.send(embed=embed)
 
 
 @client.command()
