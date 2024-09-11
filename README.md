@@ -49,3 +49,5 @@ You can customize the bot command to receive personal messages instead of receiv
 The triggers include a rolling dice function and a random age function
 
 - The bot has also a customizable status
+
+I wanted to add fooocus-ai stable diffusion model but its api turned out to be poorly documented and hard to understand :  ( so i had to use prodia api, which isnt uncensored but its not that bad either. I might turn it into an android app sometime in the future...
