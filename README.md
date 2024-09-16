@@ -1,7 +1,8 @@
 # Discord-Free-API-Bot
 Discord Bot with free simple api and AI functions, with built in responses, help command, triggers and more. Made in python.
+Update: added ai stable diffusion model using Prodia api
 
-HOW TO USE: Simply create a discord bot, upload this codes to your PyCharm specified folder. You will need to make an .env file and specify your bot AuthToken by typing DISCORD_TOKEN=xxxxxxxxxxxxxxxxxxxx
+HOW TO USE: Simply create a discord bot, upload this codes to your specified folder. You will need to make an .env file and specify your bot AuthToken by typing DISCORD_TOKEN=xxxxxxxxxxxxxxxxxxxx
 
 # 💻 API FUNCTIONS
 <img align="right" src="https://github.com/Hue-Jhan/Discord-Free-API-Bot/blob/main/media/apibot%20h.png" width="350" />
